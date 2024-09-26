@@ -1,0 +1,64 @@
+﻿version: '3.9'
+
+services:
+  cashrequestservice-api:
+    build:
+      context: ./CashRequestService.Api
+      dockerfile: Dockerfile
+    ports:
+      - "5000:8080"
+    networks:
+      - internal_network
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - MessageBroker__Host=rabbitmq://rabbitmq/
+      - MessageBroker__Username=guest
+      - MessageBroker__Password=guest
+    depends_on:
+      - rabbitmq
+      - cashrequestservice-backend
+
+  cashrequestservice-backend:
+    build:
+      context: ./CashRequestService.Backend
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - RepositorySettings__ConnectionString=Host=postgres;Database=cashrequestdb;Username=postgres;Password=YourPassword
+      - MessageBroker__Host=rabbitmq://rabbitmq/
+      - MessageBroker__Username=guest
+      - MessageBroker__Password=guest
+    depends_on:
+      - postgres
+      - rabbitmq
+    networks:
+      - internal_network
+
+  postgres:
+    image: postgres:15.8-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: YourPassword
+      POSTGRES_DB: cashrequestdb
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db-init:/docker-entrypoint-initdb.d/
+    networks:
+      - internal_network
+
+  rabbitmq:
+    image: rabbitmq:4.0.2-alpine
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    ports:
+      - "15672:15672"
+    networks:
+      - internal_network
+
+volumes:
+  postgres_data:
+
+networks:
+  internal_network:
+    driver: bridge

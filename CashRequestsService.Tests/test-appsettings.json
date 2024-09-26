@@ -1,0 +1,8 @@
+{
+  "DbType": "MSSQL",
+
+  "DbInitialization": {
+    "PostgreSQLScript": "../../../../pgsql-db-init/init.sql",
+    "MSSQLScript": "../../../../mssql-db-init/init.sql"
+  }
+}

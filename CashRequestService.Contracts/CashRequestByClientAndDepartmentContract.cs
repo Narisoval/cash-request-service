@@ -1,0 +1,3 @@
+namespace CashRequestService.Contracts;
+
+public record CashRequestByClientAndDepartmentContract(string ClientId, string DepartmentAddress);

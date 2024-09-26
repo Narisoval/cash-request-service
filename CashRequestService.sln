@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashRequestService.Api", "CashRequestService.Api\CashRequestService.Api.csproj", "{97CBC802-F7CD-473A-8707-96538C811E08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashRequestService.Contracts", "CashRequestService.Contracts\CashRequestService.Contracts.csproj", "{F9D64F20-D147-4293-941F-E15890DAC522}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashRequestService.Backend", "CashRequestService.Backend\CashRequestService.Backend.csproj", "{E9B2194C-64FC-4444-A849-02504FB4ED51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashRequestsService.Tests", "CashRequestsService.Tests\CashRequestsService.Tests.csproj", "{F42CF72C-809D-49A7-8665-9F2E1B4C97DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1C36BFE6-4864-4E34-AC76-DD362557A302}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97CBC802-F7CD-473A-8707-96538C811E08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97CBC802-F7CD-473A-8707-96538C811E08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97CBC802-F7CD-473A-8707-96538C811E08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97CBC802-F7CD-473A-8707-96538C811E08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9D64F20-D147-4293-941F-E15890DAC522}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9D64F20-D147-4293-941F-E15890DAC522}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9D64F20-D147-4293-941F-E15890DAC522}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9D64F20-D147-4293-941F-E15890DAC522}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9B2194C-64FC-4444-A849-02504FB4ED51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9B2194C-64FC-4444-A849-02504FB4ED51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9B2194C-64FC-4444-A849-02504FB4ED51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9B2194C-64FC-4444-A849-02504FB4ED51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F42CF72C-809D-49A7-8665-9F2E1B4C97DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F42CF72C-809D-49A7-8665-9F2E1B4C97DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F42CF72C-809D-49A7-8665-9F2E1B4C97DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F42CF72C-809D-49A7-8665-9F2E1B4C97DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
