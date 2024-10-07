@@ -154,7 +154,7 @@ By default, the application is configured to use PostgreSQL. You can change the 
 
 The test project is configured to use **xUnit** and **TestContainers** to spin up containers for PostgreSQL, RabbitMQ, and the services (API and backend). 
 
-1. Add desirable db type(PGSQL/MSSQL) in appsettings.json
+1. Chose desirable in DbType setting db type(PGSQL/MSSQL) in appsettings.json
 
 2. To run the tests:
    ```bash
